@@ -43,6 +43,21 @@
 // need to create a new variable with the population of Luzern here.
 // Hint2: Use console.log() to print.
 
+randomNumber = Math.random() * 100000;
+console.log(randomNumber);
+
+luzernPopulation = 82000
+
+if (randomNumber > luzernPopulation) {
+    console.log('Go Luzern!')
+}
+else if (randomNumber === luzernPopulation) {
+    console.log('Are we in the Matrix?')
+}
+else {
+    console.log('Few but good!')
+}
+
 // EXERCISE 2. Block Party.
 ///////////////////////////
 
@@ -56,8 +71,17 @@ if (2 > 1) {
 console.log(deepThought);
 
 // a. Fix it using it var instead of let.
+if (2 > 1) {
+    var deepThought = 'Everything is obvious once you know the answer.'    
+}
+console.log(deepThought);
 
 // b. Fix it using let.
+let deepThought;
+if (2 > 1) {
+    deepThought = 'Everything is obvious once you know the answer.'    
+}
+console.log(deepThought);
 
 
 // EXERCISE 3. Loose vs Strict Comparisons.
@@ -90,6 +114,16 @@ else console.log('False');
 
 // Make justice to sameness by replacing the loose comparisons above, with 
 // strict comparisons (===).
+
+if (1 === '1') console.log('True');
+else console.log('False');
+
+if (0 === false) console.log('True');
+else console.log('False');
+
+// why cannot triple =
+if (0 == []) console.log('True');
+else console.log('False');
 
 
 // For more details, see:

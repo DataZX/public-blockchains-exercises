@@ -138,7 +138,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 
 // Strings
-
+morpho = 'one';
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -148,6 +148,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // A one-type character string is also a string. Other languages have
 // the type 'char' for this special case, but not JS.
 
+morpho = 'A';
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -155,11 +156,13 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // False.
 
+morpho = false;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // True.
 
+morpho = true;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
@@ -167,11 +170,13 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Undefined.
 
+morpho = undefined;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Null
 
+morpho = null;
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 

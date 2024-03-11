@@ -210,7 +210,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // Symbols are variables that guaranteed to be unique. You probably won't 
 // use them a lot.
 
-morpho = Symbol('I am unique');
+morpho = Symbol("I am unique");
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);

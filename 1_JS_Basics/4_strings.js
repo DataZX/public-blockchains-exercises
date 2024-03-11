@@ -11,9 +11,18 @@
 str1 = "Please don't do it.";
 str2 = 'He said "Goodbye" and left.';
 
+console.log(str1)
+console.log(str2)
+
 // One string is wrapped in double quotes and the other in single quotes. 
 // What is the difference? Can you swap the content and the type of quotes?
 // Hint: characters can be escaped by placing a backslah before them (\).
+
+str1 = 'Please don\'t do it.';
+str2 = "He said \"Goodbye\" and left.";
+
+console.log(str1)
+console.log(str2)
 
 // EXERCISE 2. Join and Count.
 //////////////////////////////
@@ -26,18 +35,24 @@ str2 = 'Just like everyone else.';
 // a. Join together these two strings and assign the result to a new variable
 // named finalStr.
 
+finalStr = str1 + ' ' + str2
+console.log('The final string is: ' + finalStr)
 
 // b. Did you remember to add a space between them?
 // If so, how many characters is the final string?
 // Hint: Use the length property.
 
+console.log('The final string is ' + finalStr.length + ' characters long');
 
 // EXERCISE 3. Joining Different Types.
 ///////////////////////////////////////
 
-str1 = "Always remember that you are absolutely unique.";
-str2 = 'Just like everyone else.';
 luzernPopulation = 82000;
+
+str1 = "Always remember that you are absolutely unique.";
+str2 = ' Just like other ' + String(luzernPopulation) + ' people in Luzern.';
+finalStr = str1 + str2
+console.log(finalStr)
 
 // Did you know that you can also join strings and numbers together?
 // Replace str2 with a new sentence that includes the total population count
@@ -56,6 +71,11 @@ luzernPopulation = 82000;
 
 // Repeast exercise 3 using backticks.
 
+luzernPopulation = 82000;
+str1 = "Always remember that you are absolutely unique.";
+
+finalStr = `${str1} Just like ${luzernPopulation} persons in Luzern.`;
+console.log(finalStr);
 
 // EXERCISE 5. Such a String Manipulator.
 /////////////////////////////////////////
@@ -68,14 +88,24 @@ luzernPopulation = 82000;
 // the first part (i.e., the  initial content of str1).
 // Hint: Use the .substring() method and the length property.
 
+luzernPopulation = 82000;
+str1 = "Always remember that you are absolutely unique.";
+finalStr = `${str1} Just like ${luzernPopulation} persons in Luzern.`;
+
+finalStr = finalStr.substring(0, str1.length);
+console.log(finalStr);
+
 
 // f. Now shout it loud and make the it upper case.
 // Hint: Use the method .toUpperCase().
 
+console.log(finalStr.toUpperCase())
 
 // g. Let's be honest. An upper case sentence must end with an exclamation mark.
 // Replace the dot at the end of the sentence with an exclamation mark.
 
+finalStr = finalStr.substring(0, (finalStr.length - 1)) + '!';
+console.log(finalStr);
 
 // EXERCISE 6. Operators: const, var, let.
 //////////////////////////////////////////
@@ -93,11 +123,12 @@ luzernPopulation = 82000;
 // ever again, so you decide it to assign it to constant.
 
 // a. Assign finalStr to a constant.
-finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
+const finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
 
 
 // b. Now try to change it to something else.
-
+finalStr = finalStr.substring(0, (finalStr.length - 2)) + '!';
+console.log(finalStr)
 
 // You should have seen error. We will later learn that constants behave
 // differently with objects.
@@ -106,7 +137,7 @@ finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
 // already declared. Raise an error by re-declaring the variable below with let. 
 
 myLetVariable = 'Do not re-assign me.';
-
+let myLetVariable = 'Do not re-assign me.';
 
 //////////////////////////////
 // You finished this sheet! //

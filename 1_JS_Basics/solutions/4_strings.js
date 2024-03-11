@@ -18,6 +18,9 @@ str2 = 'He said "Goodbye" and left.';
 str1 = 'Please don\'t do it.';
 str2 = "He said \"Goodbye\" and left.";
 
+console.log(str1)
+console.log(str2)
+
 // EXERCISE 2. Join and Count.
 //////////////////////////////
 

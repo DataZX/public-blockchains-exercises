@@ -21,7 +21,7 @@ function divideNumbers(a, b) {
 // but you might get an unexpected result. Strongly typed languages
 // (e.g., JAVA) would catch these errors automatically, but in scripted
 // languages you need to be careful.
-divideNumbers('what', {});
+console.log(divideNumbers('what', {}));
 // NaN means Not a Number.
 
 // JavaScript makes it particularly difficult to catch these errors,
@@ -34,7 +34,11 @@ console.log(typeof NaN);
 // a special return value with a warning on console.log.
 
 function divideNumbers(a, b) {
-    // Your code here.
+    if ('number' !== typeof a || 'number' !== typeof b) {
+        console.log('invalid inputs');
+        return false;
+    }
+    return a / b;
 }
 
 divideNumbers('what', {});
@@ -64,7 +68,15 @@ judgePerson(brendan);
 // we catch it with a try and catch statement and print an error message.
 
 function judgePerson(person, cb) {
-    // Your code here.
+    let str;
+    try {
+        str = person.first + ' ' + person.last + cb()
+    }
+    catch(error) {
+        console.log('An error occurred. Are you sure you passed a function?');
+        return;
+    }
+    console.log(str);
 }
 
 brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
